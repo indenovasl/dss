@@ -6,18 +6,18 @@
 	xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
 	<!-- Root element -->
-	<xs:element name="SimpleCertificateReport" type="SimpleCertificateReport" />
+	<xs:element name="simpleCertificateReport" type="SimpleCertificateReport" />
 
 	<xs:complexType name="SimpleCertificateReport">
 		<xs:sequence>
-			<xs:element name="Chain" type="Chain" maxOccurs="1" minOccurs="0" />
+			<xs:element name="chain" type="Chain" maxOccurs="1" minOccurs="0" />
 		</xs:sequence>
-		<xs:attribute name="ValidationTime" type="xs:dateTime" />
+		<xs:attribute name="validationTime" type="xs:dateTime" />
 	</xs:complexType>
 		
 	<xs:complexType name="Chain">
 		<xs:sequence>
-			<xs:element name="ChainItem" type="ChainItem" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="chainItem" type="ChainItem" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 	
@@ -69,8 +69,8 @@
 			<xs:element name="qualificationAtValidation" type="CertificateQualification" minOccurs="0" />
 			<xs:element name="revocation" type="Revocation" minOccurs="0" />
 			<xs:element name="trustAnchors" type="TrustAnchors" minOccurs="0" />
-			<xs:element name="Indication" type="Indication" />
-			<xs:element name="SubIndication" type="SubIndication" minOccurs="0" />
+			<xs:element name="indication" type="Indication" />
+			<xs:element name="subIndication" type="SubIndication" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 	
