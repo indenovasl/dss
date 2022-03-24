@@ -997,14 +997,42 @@
 	</dependencyManagement>
 
 	<distributionManagement>
-		<repository>
+<!--		<repository>
 			<id>cefdigital-nexus</id>
 			<url>https://ec.europa.eu/cefdigital/artifact/content/repositories/esignaturedss</url>
 		</repository>
 		<snapshotRepository>
 			<id>cefdigital-nexus</id>
 			<url>https://ec.europa.eu/cefdigital/artifact/content/repositories/esignaturedss-snapshots</url>
-		</snapshotRepository>
+		</snapshotRepository>-->
+                
+            <!-- Despliegue de la documentaciÃ³n del proyecto en la web de Indenova -->
+            <site>
+                <id>siteIndenova</id>
+                <url>scp://prodinfo.indenova.eu/var/www/prodinfo.indenova.eu/${project.name}/${project.name}-${project.version}</url>
+            </site>
+
+            <repository>
+                <id>artifactory.indenova.eu-releases</id>
+                <name>artifactory.indenova.eu-releases</name>
+                <url>http://artifactory.indenova.eu:80/artifactory/indenova-local</url>
+            </repository>
+
+            <snapshotRepository>
+                <id>artifactory.indenova.eu-snapshots</id>
+                <name>artifactory.indenova.eu-snapshots</name>
+                <url>http://artifactory.indenova.eu:80/artifactory/indenova-local</url>
+                <releases>
+                    <enabled>false</enabled>
+                    <updatePolicy>never</updatePolicy>
+                </releases>
+                <snapshots>
+                    <enabled>true</enabled>
+                    <updatePolicy>daily</updatePolicy>
+                </snapshots>            
+            </snapshotRepository>
+                
+                
 	</distributionManagement>
 	
 	<issueManagement>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-Subir a artifactory</actionName>
+            <displayName>Subir a artifactory</displayName>
+            <goals>
+                <goal>deploy</goal>
+            </goals>
+            <activatedProfiles>
+                <activatedProfile>release-profile</activatedProfile>
+            </activatedProfiles>
+        </action>
+    </actions>
