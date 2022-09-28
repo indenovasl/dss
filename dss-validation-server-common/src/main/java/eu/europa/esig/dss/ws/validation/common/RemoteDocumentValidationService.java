@@ -38,6 +38,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.ByteArrayInputStream;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * The remote validation service
@@ -126,6 +127,9 @@ public class RemoteDocumentValidationService {
 		if (dataToValidate.getTokenExtractionStrategy() != null) {
 			signedDocValidator.setTokenExtractionStrategy(dataToValidate.getTokenExtractionStrategy());
 		}
+                if(dataToValidate.getLocale() != null){
+                    signedDocValidator.setLocale(Locale.forLanguageTag(dataToValidate.getLocale()));
+                }
 		return signedDocValidator;
 	}
 

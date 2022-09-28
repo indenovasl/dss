@@ -55,6 +55,11 @@ public class DataToValidateDTO {
 	 * The signature to operate on
 	 */
 	private String signatureId;
+        
+        /**
+         * The validation report desired locale.
+         */
+        private String locale;
 
 	/**
 	 * Empty constructor
@@ -204,4 +209,22 @@ public class DataToValidateDTO {
 		this.signatureId = signatureId;
 	}
 
+        /**
+	 *  Gets the dessired locale for the validation report
+	 */
+        public String getLocale() {
+            return locale;
+        }
+
+        /**
+         * Sets the desired locale for the validation report
+         * @param locale 
+         */
+        public void setLocale(String locale) {
+            this.locale = locale;
+        }
+
+        
+        
+        
 }
